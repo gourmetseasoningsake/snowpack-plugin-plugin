@@ -2,12 +2,30 @@ import { name } from './package.json'
 
 
 
+const isArray = x => Array.isArray(x)
+
+
+
+const isFunction = f => typeof f === 'function'
+
+
+
 export default 
-  (conf, { input, output, load, transform, optimize }) =>
-  ({
-    name: name,
-    resolve: { input, output },
-    load: load ? (async x => load(x, conf)) : () => {},
-    transform: transform && (async x => transform(x, conf)),
-    optimize: optimize && (async x => optimize(x, conf)),
-  })
+  (config, { input, output, load, transform, optimize }) => {
+    let value = { name }
+
+    if (isArray(input) && isArray(output) && isFunction(load)) {
+      value.resolve = { input, ouput }
+      value.load = async x => load(x, config)
+    }
+
+    if (isFunction(transform)) {
+      value.transform = async x => transform(x, config)
+    }
+
+    if (isFunction(optimize)) {
+      value.optimize = async x => optimize(x, config)
+    }
+
+    return value
+  }

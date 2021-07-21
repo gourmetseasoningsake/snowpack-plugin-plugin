@@ -1,6 +1,6 @@
 {
   "name": "@ampire/snowpack-plugin-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "Apache-2.0",
   "homepage": "https://github.com/gourmetseasoningsake/snowpack-plugin-plugin",
   "description": "Hook into the pipeline.",
@@ -28,6 +28,9 @@
     "test": "ava plugin.spec.js",
     "build": "rollup -c",
     "spec:cov": "nyc ava",
-    "spec:rep": "nyc --reporter=lcov --reporter=text-summary ava && open ./coverage/lcov-report/index.html"
+    "spec:rep": "nyc --reporter=lcov --reporter=text-summary ava && open ./coverage/lcov-report/index.html",
+    "patch": "npm version patch && npm build",
+    "minor": "npm version minor && npm build",
+    "major": "npm version major && npm build"
   }
 }
