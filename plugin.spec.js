@@ -31,7 +31,7 @@ test.serial( 'desc me',
     const stubs = setupStubs(value);
 
     //e
-    const pluginInstance = plugin({}, {});
+    const pluginInstance = plugin({}, { input: [], output: [], load: () => value });
     const result = await pluginInstance.load({
         isDev: true,
         filePath: 'path'

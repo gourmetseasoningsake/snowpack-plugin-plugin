@@ -29,8 +29,8 @@
     "build": "rollup -c",
     "spec:cov": "nyc ava",
     "spec:rep": "nyc --reporter=lcov --reporter=text-summary ava && open ./coverage/lcov-report/index.html",
-    "patch": "npm version patch && npm build",
-    "minor": "npm version minor && npm build",
-    "major": "npm version major && npm build"
+    "patch": "npm version patch && npm run build",
+    "minor": "npm version minor && npm run build",
+    "major": "npm version major && npm run build"
   }
 }

@@ -15,7 +15,7 @@ export default
     let value = { name }
 
     if (isArray(input) && isArray(output) && isFunction(load)) {
-      value.resolve = { input, ouput }
+      value.resolve = { input, output }
       value.load = async x => load(x, config)
     }
 
