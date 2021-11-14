@@ -1,6 +1,6 @@
 {
   "name": "@gourmetseasoningsake/snowpack-plugin-plugin",
-  "version": "0.2.13",
+  "version": "0.2.14",
   "license": "Apache-2.0",
   "homepage": "https://github.com/gourmetseasoningsake/snowpack-plugin-plugin",
   "description": "Lifecycle hooks",
@@ -12,7 +12,9 @@
   "main": "./dist/plugin.cjs.js",
   "module": "./dist/plugin.esm.js",
   "exports": "./dist/plugin.esm.js",
-  "files": [ "dist" ],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "@gourmetseasoningsake:registry": "https://npm.pkg.github.com"
   },
