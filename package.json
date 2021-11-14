@@ -12,7 +12,7 @@
   "main": "dist/plugin.cjs.js",
   "module": "dist/plugin.esm.js",
   "files": [
-    "dist"
+    "dist/**/*"
   ],
   "publishConfig": {
     "@gourmetseasoningsake:registry": "https://npm.pkg.github.com"
