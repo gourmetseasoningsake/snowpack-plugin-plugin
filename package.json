@@ -9,9 +9,9 @@
     "type": "git",
     "url": "git@github.com:gourmetseasoningsake/snowpack-plugin-plugin.git"
   },
-  "main": "./dist/plugin.cjs.js",
-  "module": "./dist/plugin.esm.js",
-  "exports": "./dist/plugin.esm.js",
+  "main": "./lib/plugin.cjs.js",
+  "module": "./lib/plugin.esm.js",
+  "exports": "./lib/plugin.esm.js",
   "publishConfig": {
     "@gourmetseasoningsake:registry": "https://npm.pkg.github.com"
   },
