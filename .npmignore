@@ -2,8 +2,8 @@
 *.config.js
 package-lock.json
 *.spec.js
+plugin.js
 
 .github/
 node_modules/
 coverage/
-
