@@ -1,0 +1,9 @@
+*.log
+*.config.js
+package-lock.json
+*.spec.js
+
+.github/
+node_modules/
+coverage/
+
