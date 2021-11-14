@@ -11,7 +11,6 @@
   },
   "main": "./dist/plugin.cjs.js",
   "module": "./dist/plugin.esm.js",
-  "exports": "./dist/plugin.esm.js",
   "files": [
     "dist"
   ],
