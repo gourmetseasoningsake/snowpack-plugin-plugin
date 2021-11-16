@@ -11,20 +11,24 @@ const isFunction = f => typeof f === 'function'
 
 
 export default 
-  (config, { input, output, load, transform, optimize }) => {
+  (config, { input, output, load, transform, run, optimize }) => {
     let value = { name }
 
     if (isArray(input) && isArray(output) && isFunction(load)) {
       value.resolve = { input, output }
-      value.load = async x => load(x, config)
+      value.load = x => load(x, config)
     }
 
     if (isFunction(transform)) {
-      value.transform = async x => transform(x, config)
+      value.transform = x => transform(x, config)
+    }
+
+    if (isFunction(run)) {
+      value.run = x => run(x, config)
     }
 
     if (isFunction(optimize)) {
-      value.optimize = async x => optimize(x, config)
+      value.optimize = x => optimize(x, config)
     }
 
     return value
