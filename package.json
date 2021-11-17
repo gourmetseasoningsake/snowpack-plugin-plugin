@@ -15,23 +15,17 @@
     "dist"
   ],
   "publishConfig": {
-    "@gourmetseasoningsake:registry": "https://npm.pkg.github.com"
+    "@gourmetseasoningsake:registry": "https://npm.pkg.github.com/"
   },
-  "peerDependencies": {},
   "devDependencies": {
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.2",
-    "ava": "^3.15.0",
-    "esm": "^3.2.25",
-    "nyc": "^15.1.0",
-    "rollup": "^2.53.2",
-    "sinon": "^11.1.1"
+    "rollup": "^2.53.2"
   },
   "scripts": {
-    "test": "ava plugin.spec.js",
+    "test": "exit 0",
     "build": "rollup -c",
-    "spec:cov": "nyc ava",
-    "spec:rep": "nyc --reporter=lcov --reporter=text-summary ava && open ./coverage/lcov-report/index.html",
+    "postpublish": "npm publish --ignore-scripts --registry='https://npm.ampire.ch/'",
     "patch": "npm version patch && npm run build",
     "minor": "npm version minor && npm run build",
     "major": "npm version major && npm run build"

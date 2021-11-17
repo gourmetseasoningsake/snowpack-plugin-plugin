@@ -10,25 +10,32 @@ const isFunction = f => typeof f === 'function'
 
 
 
-export default 
-  (config, { input, output, load, transform, run, optimize }) => {
+export default ( 
+    unsafeConfig, {
+    input, output,
+    load, 
+    transform, 
+    run, 
+    optimize
+  }) => {
+
     let value = { name }
 
     if (isArray(input) && isArray(output) && isFunction(load)) {
       value.resolve = { input, output }
-      value.load = x => load(x, config)
+      value.load = x => load(x, unsafeConfig)
     }
 
     if (isFunction(transform)) {
-      value.transform = x => transform(x, config)
+      value.transform = x => transform(x, unsafeConfig)
     }
 
     if (isFunction(run)) {
-      value.run = x => run(x, config)
+      value.run = x => run(x, unsafeConfig)
     }
 
     if (isFunction(optimize)) {
-      value.optimize = x => optimize(x, config)
+      value.optimize = x => optimize(x, unsafeConfig)
     }
 
     return value
