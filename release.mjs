@@ -4,8 +4,6 @@ import { execSync } from 'child_process'
 
 execSync('npm version patch')
 
+const version = execSync(`npm version`, { encoding: 'utf8'})
 
-const version = execSync(`npm view ${pkg.name} version`, { encoding: 'utf8'})
-
-
-console.log(version)
+console.log(version[pkg.name])
