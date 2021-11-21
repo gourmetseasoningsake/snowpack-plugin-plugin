@@ -15,10 +15,13 @@
     "dist"
   ],
   "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.2",
     "husky": "^7.0.4",
-    "rollup": "^2.53.2"
+    "rollup": "^2.53.2",
+    "semantic-release": "^18.0.0"
   },
   "scripts": {
     "test": "exit 0",
