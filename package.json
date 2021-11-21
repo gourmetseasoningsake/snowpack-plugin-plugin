@@ -15,8 +15,6 @@
     "dist"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.2",
     "husky": "^7.0.4",
@@ -29,6 +27,7 @@
     "minor": "npm version minor && npm run build",
     "major": "npm version major && npm run build",
     "postpublish:ampire": "npm publish --ignore-scripts --registry=https://npm.ampire.ch/",
-    "postpublish": "npm run postpublish:ampire"
+    "postpublish": "npm run postpublish:ampire",
+    "prepare": "husky install"
   }
 }
