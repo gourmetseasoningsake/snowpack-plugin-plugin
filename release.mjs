@@ -5,7 +5,7 @@ import { execSync } from 'child_process'
 execSync('npm version patch')
 
 
-const version = execSync(`npm version ${pkg.name}`)
+const version = execSync(`npm version`)
 
 
 console.log(version)
