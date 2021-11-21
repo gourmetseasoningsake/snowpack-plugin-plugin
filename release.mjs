@@ -6,4 +6,4 @@ execSync('npm version patch')
 
 const version = execSync(`npm version`, { encoding: 'utf8'})
 
-console.log(version[pkg.name])
+console.log(version)
