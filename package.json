@@ -1,6 +1,6 @@
 {
   "name": "@gourmetseasoningsake/snowpack-plugin-plugin",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "homepage": "https://github.com/gourmetseasoningsake/snowpack-plugin-plugin",
   "description": "Lifecycle hooks",
@@ -9,26 +9,18 @@
     "type": "git",
     "url": "git@github.com:gourmetseasoningsake/snowpack-plugin-plugin.git"
   },
-  "main": "./dist/plugin.cjs.js",
   "module": "./dist/plugin.esm.js",
   "files": [
     "dist"
   ],
   "devDependencies": {
-    "@commitlint/cli": "^15.0.0",
-    "@commitlint/config-conventional": "^15.0.0",
     "@rollup/plugin-json": "^4.1.0",
     "@rollup/plugin-node-resolve": "^13.0.2",
-    "husky": "^7.0.4",
-    "rollup": "^2.53.2",
-    "semantic-release": "^18.0.0"
+    "rollup": "^2.53.2"
   },
   "scripts": {
     "test": "exit 0",
     "build": "rollup -c",
-    "patch": "npm version patch && npm run build",
-    "minor": "npm version minor && npm run build",
-    "major": "npm version major && npm run build",
     "postpublish:ampire": "npm publish --ignore-scripts --registry=https://npm.ampire.ch/",
     "postpublish": "npm run postpublish:ampire",
     "prepare": "husky install"
