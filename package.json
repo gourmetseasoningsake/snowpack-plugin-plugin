@@ -21,10 +21,8 @@
   "scripts": {
     "test": "exit 0",
     "build": "rollup -c",
-    "patch": "npm version patch && npm run build",
-    "minor": "npm version minor && npm run build",
-    "major": "npm version major && npm run build",
     "postpublish:ampire": "npm publish --ignore-scripts --registry=https://npm.ampire.ch/",
-    "postpublish": "npm run postpublish:ampire"
+    "postpublish": "npm run postpublish:ampire",
+    "prepare": "husky install"
   }
 }
