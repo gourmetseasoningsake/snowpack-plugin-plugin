@@ -12,7 +12,6 @@ export default [
         exports: 'default'
       }
     ],
-
     plugins: [ json(), nodeResolve({ extensions: ['.js' ] }) ],
     external: [],
   }

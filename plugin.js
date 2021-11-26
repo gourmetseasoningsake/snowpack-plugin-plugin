@@ -16,7 +16,6 @@ const plugin = (
     run, 
     optimize
   }) => {
-    test()
     let value = { name }
 
     if (isFunction(config)) {
