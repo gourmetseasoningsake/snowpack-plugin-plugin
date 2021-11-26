@@ -1,3 +1,1 @@
 # snowpack-plugin-plugin
-
-wip...
