@@ -9,6 +9,7 @@
     "type": "git",
     "url": "git@github.com:gourmetseasoningsake/snowpack-plugin-plugin.git"
   },
+  "main": "./dist/plugin.cjs.js",
   "module": "./dist/plugin.esm.js",
   "files": [
     "dist"
